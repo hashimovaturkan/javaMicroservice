@@ -7,12 +7,18 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="SpringCloudConfigServer" />
+        <module name="CurrencyExchangeServer" />
         <module name="LimitedMicroService" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="CurrencyExchangeService" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="CurrencyExchangeServer" options="-parameters" />
+      <module name="CurrencyExchangeService" options="-parameters" />
       <module name="LimitedMicroService" options="-parameters" />
       <module name="SpringCloudConfigServer" options="-parameters" />
     </option>
