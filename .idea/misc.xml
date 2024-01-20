@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/SpringCloudConfigServer/pom.xml" />
         <option value="$PROJECT_DIR$/../CurrencyExchangeService/pom.xml" />
         <option value="$PROJECT_DIR$/CurrencyExchangeServer/pom.xml" />
+        <option value="$PROJECT_DIR$/CurrencyConversion/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
