@@ -1,14 +1,14 @@
 package com.example.limitedmicroservice.bean;
-
 public class Limits {
-
     private int minimum;
     private int maximum;
 
     public Limits() {
+        super();
     }
 
     public Limits(int minimum, int maximum) {
+        super();
         this.minimum = minimum;
         this.maximum = maximum;
     }
@@ -28,4 +28,5 @@ public class Limits {
     public void setMaximum(int maximum) {
         this.maximum = maximum;
     }
+
 }
