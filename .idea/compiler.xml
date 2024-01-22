@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="CurrencyConversion" />
+        <module name="NamingServer" />
         <module name="LimitedMicroService" />
         <module name="SpringCloudConfigServer" />
         <module name="CurrencyExchangeServer" />
@@ -22,6 +23,7 @@
       <module name="CurrencyExchangeServer" options="-parameters" />
       <module name="CurrencyExchangeService" options="-parameters" />
       <module name="LimitedMicroService" options="-parameters" />
+      <module name="NamingServer" options="-parameters" />
       <module name="SpringCloudConfigServer" options="-parameters" />
     </option>
   </component>
