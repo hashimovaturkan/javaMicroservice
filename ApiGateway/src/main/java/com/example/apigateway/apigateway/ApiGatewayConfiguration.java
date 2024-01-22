@@ -30,6 +30,7 @@ public class ApiGatewayConfiguration {
                         .filters(f -> f.rewritePath(
                                 "/currency-conversion-new/(?<segment>.*)",
                                 "/currency-conversion-feign/${segment}"))
+                        //load balance
                         .uri("lb://currency-conversion"))
                 .build();
     }

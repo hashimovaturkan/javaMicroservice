@@ -27,3 +27,11 @@ currencyexchange'e port 8000den bidefe 8001den atacaq request onuda balanslasdir
 butun apilerin biryerden idare olunmasi ucundur yeni artiq ayri ayri endpointleri almaqcun ayri ayri servicelere request atmaqdansa
 artiq apigateway uzerinde endpointlerin hamisina el catmaq mumkundur
 istiafdeci birbasa requesti apigateway'e atir isticinin basqa servicelerle isi yoxdu apigateway'e atilan requesteri yonleriri
+
+
+4.Circuit breaker - Resilience4j
+Microservicelerde serviceler coxdu ve birbirinden asili ola bilirler. Eger onlardan biri down olarsa ve ya slow olarsa hamisina tesir edir
+bu veziyyetde ne etmeliyik
+Biri down ve ya load olanda ondan evvelki yeni request atan service default bisey done biler
+Biz bir nece defe request ata bilerik default fallback response gondermeden evvel
+Spesific periodlarda request atila biler
