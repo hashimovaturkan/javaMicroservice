@@ -11,6 +11,7 @@
         <module name="LimitedMicroService" />
         <module name="SpringCloudConfigServer" />
         <module name="CurrencyExchangeServer" />
+        <module name="ApiGateway" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -19,6 +20,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ApiGateway" options="-parameters" />
       <module name="CurrencyConversion" options="-parameters" />
       <module name="CurrencyExchangeServer" options="-parameters" />
       <module name="CurrencyExchangeService" options="-parameters" />

@@ -1,0 +1,29 @@
+1.Spring cloud config server
+butun configurasiyalari biryerden idare etmek ucun istifade olunur.
+artiq servicelerin application.settings file'ndaki hamisi biryerden idare olunur.
+Ana service config server dependencysini yukleyir ve configlerin yazilacagi urli orda qeyd edirik
+spring.cloud.config.server.git.uri=file://D:/Lesson/Java/microserviceConfiguration/
+Client serviceler ise
+spring.config.import=optional:configserver:http://localhost:8888
+import edir ana service'i
+
+2.Naming Server
+Meqsed bir serviceden basqa bir service'e request atarken mes feign istifade olunur. Orda hara request atilacaq urlleridinamik idare edeceyimiz
+bir yerdir her bir service'in instanslari buradan idare olunur. load balance burda idare edilir.
+eureka-server naming serverde dependencylere elave olunur
+diger client servicelerde de bu elave olunur:
+eureka.client.serviceUrl.defaultZone = http://localhost:8761/eureka
+Service discovery allows services to locate and communicate with each other efficiently,
+load balancing ensures that traffic is distributed optimally among multiple service instances
+A service registry is a database used to keep track of the available instances of each microservice in an application.
+The service registry acts as a central repository where services can register their network locations, capabilities, and metadata.
+ The service discovery mechanism allows services to dynamically discover and locate other services based on their registered information.
+Service registry ve naming server eyni seydi
+
+ bu umumiyyetle instancelarin load balance ni da ayarladi artiq mes CurrencyConversiondaki proxy olan eureka isletdiuyimiz apiye baxsag bidefe
+currencyexchange'e port 8000den bidefe 8001den atacaq request onuda balanslasdirir bu eger tebiki intelljde elave etmisikse bunu goreceyik
+
+3.ApiGateway
+butun apilerin biryerden idare olunmasi ucundur yeni artiq ayri ayri endpointleri almaqcun ayri ayri servicelere request atmaqdansa
+artiq apigateway uzerinde endpointlerin hamisina el catmaq mumkundur
+istiafdeci birbasa requesti apigateway'e atir isticinin basqa servicelerle isi yoxdu apigateway'e atilan requesteri yonleriri
