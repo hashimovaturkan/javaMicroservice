@@ -1,5 +1,8 @@
 package com.example.currencyexchangeserver;
 
+import io.github.resilience4j.bulkhead.annotation.Bulkhead;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
 import io.github.resilience4j.retry.annotation.Retry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,7 +18,10 @@ public class CircuitBreakerController {
     //bu fail olacaq
     @GetMapping("/sample-api")
    /* @Retry(name = "default") //default olaraq 3 defe request atir*/
-    @Retry(name = "sample-api", fallbackMethod = "hardcodedResponse") //custom
+    //@Retry(name = "default", fallbackMethod = "hardcodedResponse") //custom
+    //@CircuitBreaker(name = "sample-api", fallbackMethod = "hardcodedResponse")
+    //@RateLimiter(name = "default")
+    @Bulkhead(name = "sample-api")
     public String sampleApi(){
 
         logger.info("Fail");
