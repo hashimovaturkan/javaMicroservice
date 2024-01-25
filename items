@@ -35,3 +35,9 @@ bu veziyyetde ne etmeliyik
 Biri down ve ya load olanda ondan evvelki yeni request atan service default bisey done biler
 Biz bir nece defe request ata bilerik default fallback response gondermeden evvel
 Spesific periodlarda request atila biler
+
+5.Zipkin
+Zipkin, bir distributed tracing sistemi olarak çalışır. Bu, bir uygulamanın birden fazla parçasının nasıl çalıştığını ve bir hata durumunda
+bu hatanın neden gerçekleştiğini takip etmenizi sağlar. Zipkin, bilgileri toplar ve bunları bir veritabanına kaydeder, böylece daha sonra analiz edebilirsiniz.
+Prosda track sistemidir.
+Docker ile isleyir

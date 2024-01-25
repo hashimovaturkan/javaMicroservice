@@ -15,6 +15,9 @@ import java.util.Map;
 public class CurrencyConversionController {
 
     @Autowired
+    private RestTemplate restTemplate;
+
+    @Autowired
     CurrencyExchangeProxy currencyExchangeProxy;
 
     //burda resttemplele atib requesti secim olaraq feign daha ustundur asandir.
@@ -31,7 +34,7 @@ public class CurrencyConversionController {
 
         //request atmaq
         ResponseEntity<CurrencyConversion> responseEntity =
-                new RestTemplate().getForEntity("http://localhost:8000/currency-exchange/from/{from}/to/{to}", CurrencyConversion.class,urlVariables);
+                restTemplate.getForEntity("http://localhost:8000/currency-exchange/from/{from}/to/{to}", CurrencyConversion.class,urlVariables);
 
         CurrencyConversion currencyConversion = responseEntity.getBody();
 
