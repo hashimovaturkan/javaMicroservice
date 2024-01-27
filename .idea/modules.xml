@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/LimitedMicroService/LimitedMicroService.iml" filepath="$PROJECT_DIR$/LimitedMicroService/LimitedMicroService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringCloudConfigServer/SpringCloudConfigServer.iml" filepath="$PROJECT_DIR$/SpringCloudConfigServer/SpringCloudConfigServer.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/javaMicroservice.iml" filepath="$PROJECT_DIR$/.idea/javaMicroservice.iml" />
     </modules>
   </component>
