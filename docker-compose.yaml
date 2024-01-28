@@ -1,10 +1,18 @@
 version: '3.7'
 services:
   currency-exchange:
-    image: java-docker
+    image: currency-exchange
 #    mem_limit: 700m
     ports:
       - "8000:8000"
+    networks:
+      - currency-network
+
+  currency-change:
+    image: currency-conversion
+    #    mem_limit: 700m
+    ports:
+      - "8100:8100"
     networks:
       - currency-network
 networks:
